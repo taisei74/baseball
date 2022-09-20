@@ -13,7 +13,8 @@
 
 Route::get('/', 'BaseballController@top');
 Route::get('/kojin', 'BaseballController@kojin');
-Route::get('/basho', 'BaseballController@basho');
+Route::get('/kojin/show', 'BaseballController@show');
+Route::get('/place', 'BaseballController@place');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

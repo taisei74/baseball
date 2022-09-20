@@ -20,7 +20,7 @@
         </div>
         <div class='homerun'>
             <h4>[<a href='/kojin'>ホームラン数(個人)</a>]</h4>
-            <h4>[<a href='/basho'>ホームラン数(場所)</a>]</h4>
+            <h4>[<a href='/place'>ホームラン数(場所)</a>]</h4>
         </div>    
     </body>
 </html>
