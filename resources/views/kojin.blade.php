@@ -12,9 +12,9 @@
     </head>
     <body>
     <div class='kojin_ranking'>
-        @foreach($users as $user)
+        @foreach($homeruns as $homerun)
         <h1>ホームラン数(個人)</h1>
-        <h2>1位{{ $user->name }}</h2>
+        <h2>1位{{ $homerun->user->name }} {{ $homerun->hon }}本</h2>
         <h2>2位</h2>
         <h2>3位</h2>
         <h2>4位</h2>

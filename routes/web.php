@@ -14,6 +14,7 @@
 Route::get('/', 'BaseballController@top');
 Route::get('/kojin', 'BaseballController@kojin');
 Route::get('/basho', 'BaseballController@basho');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
