@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Profile;
 use App\Homerun;
 use App\Place;
+use App\User;
 
 class BaseballController extends Controller
 {
@@ -15,7 +16,11 @@ class BaseballController extends Controller
     }
     public function kojin()
     {
-        $homeruns = Homerun::all();
+        
+        $homeruns = Homerun::all()->sortBydesc('hon');
+        
+        
+        
         return view('kojin')->with(['homeruns' => $homeruns]);
     }
     
