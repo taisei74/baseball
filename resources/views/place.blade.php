@@ -12,13 +12,13 @@
     </head>
     <body>
     <div class='place_ranking'>
-       @foreach($places as $place)
-        <h1>ホームラン数(場所)</h1>
-        <h2>1位:{{ $place->name }} {{ $place->kazu }}本</h2>
-        <h2>2位</h2>
-        <h2>3位</h2>
-        <h2>4位</h2>
-        <h2>5位</h2>
+     <h2>ホームランランキング（場所)</h2>
+       @foreach($places as $key=>$place)
+        <h4>{{ $key + 1 }}位 {{ $place->name }} </h4>
+        @foreach($sumruns as $sumrun)
+      
+        <p>{{ $sumrun->sum_run }}本</p>
+        @endforeach
         @endforeach
     </div>
         <div calss='back'>[<a href='/'>戻る</a>]</div>

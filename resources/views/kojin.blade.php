@@ -11,33 +11,17 @@
 
     </head>
     <body>
-  <?php
-  $rank = 1;
-  $cnt = 1;
-  $previous_point = 0;
-  $ranking = '';
-  $ranking .= '<table>';
-  $ranking .= '<tr><th>順位</th><th>ユーザー名</th><th>ホームラン数</th><th>自己紹介</th></tr>';
-  foreach($homeruns as $homerun){
-     if($previous_point != $homerun['hon']){
-        $rank = $cnt;}
-    if ($rank >= 3){
-        break;
-    }
-    $ranking .= '<tr>';
-    $ranking .= '<td class="rank">'.$rank.'</td>';
-    $ranking .= '<td>'.  $homerun->user['name'] .' さん'.'</td>';
-    $ranking .= '<td>'.  $homerun['hon']. '本'.'</td>';
-    $ranking .= '<td>'.  print  '<a href="https://67d8ab0dd458470cbc81cbc80c979d56.vfs.cloud9.us-west-1.amazonaws.com/kojin/show">'. '自己紹介' . '</a>' .'</td>';
-    $ranking .= '</tr>';
-   
-   $cnt++;
-   
-  }
-  $ranking .= '</table>';
-  echo $ranking;
-   
-  ?>
-       <div calss='back'>[<a href='/'>戻る</a>]</div>
+    <div class='kojin_ranking'>
+        <h2>ホームラン数(個人)</h2>
+        @foreach($profiles as $index=>$profile)
+        <div>
+        <p>{{ $index + 1 }}位
+       <a href='/kojin/{{ $profile->id }}'> {{ $profile->name }} </a> 
+        {{ $profile->run }}本</p>
+        </div>
+       
+        @endforeach
+    </div>
+        <div calss='back'>[<a href='/'>戻る</a>]</div>
     </body>
 </html>

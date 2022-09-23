@@ -37,13 +37,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-    public function homerun()
-    {
-        return $this->hasOne('App\Homerun');
-    }
     public function profile()
     {
         return $this->hasOne('App\Profile');
     }
-    
 }
