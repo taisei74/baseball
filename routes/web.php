@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', 'BaseballController@top');
-Route::get('/kojin', 'BaseballController@kojin');
-Route::get('/kojin/show', 'BaseballController@show');
-Route::get('/place', 'BaseballController@place');
+Route::get('/', 'ProfileController@top');
+Route::get('/kojin', 'ProfileController@kojin');
+Route::get('/kojin/{profile}', 'ProfileController@show');
+Route::get('/basho', 'PlaceController@basho');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

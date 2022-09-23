@@ -8,6 +8,10 @@ class Profile extends Model
 {
     public function user()
     {
-        return $this->belongsTo('App\User');
+       return $this->hasOne('App\User');
+    }
+    public function place()
+    {
+        return $this->hasOne('App\Place');
     }
 }

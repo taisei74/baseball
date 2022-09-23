@@ -11,8 +11,9 @@
 
     </head>
     <body>
-        @foreach($profiles as $profile)
-    <h1>名前:{{ $profile->user->name }}</h1> <h5>[編集]</h5>
+   
+      
+    <h1>名前:{{ $profile->name }}</h1> <h5>[編集]</h5>
     <div class='location'>
         <h4>ホームバッティングセンター</h4>
         <p>何打ち:{{ $profile->box }}</p>
@@ -21,10 +22,10 @@
         <h2>自己紹介:{{ $profile->body }}</h2>
     </div>
     <div>
-        <h5>現在のホームラン数{{ $profile->user->homerun->hon }}</h5>
+        <h5>現在のホームラン数{{ $profile->run }}</h5>
         <h5>質問</h5>
        
-        @endforeach
+     
     </div>
     <div class='back'>[<a href='/kojin'>戻る</a>]</div>
     </body>
